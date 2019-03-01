@@ -17,8 +17,7 @@ public class Run {
 
     public static void main(String[] args) throws Exception {
         final ServerBootstrap sb = new ServerBootstrap();
-        try {
-            sb.group(new NioEventLoopGroup(), new NioEventLoopGroup())
+        try { sb.group(new NioEventLoopGroup(), new NioEventLoopGroup())
              .channel(NioServerSocketChannel.class)
              .localAddress(new InetSocketAddress(6666))
              .childHandler(new ChannelInitializer<SocketChannel>() {

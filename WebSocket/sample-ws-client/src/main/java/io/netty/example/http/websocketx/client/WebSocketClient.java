@@ -57,7 +57,7 @@ import java.net.URI;
  */
 public final class WebSocketClient {
 
-    static final String URL = System.getProperty("url", "ws://172.17.0.1:9099/testwebsocket/1.0");
+    static final String URL = System.getProperty("url", "ws://172.17.0.1:9099/websocket/1.0");
 
     public static void main(String[] args) throws Exception {
         URI uri = new URI(URL);
@@ -99,7 +99,7 @@ public final class WebSocketClient {
                     new WebSocketClientHandler(
                             WebSocketClientHandshakerFactory.newHandshaker(
                                     uri, WebSocketVersion.V13, null, false, new DefaultHttpHeaders()
-                            .add("Authorization", "Bearer 53d13a74-cf0a-3871-96c1-a59f441ecb1b")));
+                            .add("Authorization", "Bearer c66d9c1c-62cc-3d47-83cb-f73058b8f238")));
 
             Bootstrap b = new Bootstrap();
             b.group(group)
